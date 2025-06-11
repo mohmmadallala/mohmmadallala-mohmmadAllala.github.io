@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة ويب كاملة</title>
+    <style>
+        /* أنماط CSS */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #2c3e50;
+            padding: 0.5rem;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section {
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: right;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        form {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div style="background-color: aqua;color: red;font-size: 50px;font-family: Arial, Helvetica, sans-serif;text-align: center;text-decoration: underline;">mohmmad  nidal allala</div>
+    <!-- رأس الصفحة -->
+    <header>
+        <h1>موقعي الإلكتروني</h1>
+        <h1>اختصاص تهديدات الامن السيبراني</h1>
+        <h2>المتخصص محمد اللالا</h2>
+        <p>مرحبًا بكم في موقعنا الشامل</p>
+    </header>
+    
+    <!-- شريط التنقل -->
+    <nav>
+        <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </nav>
+    
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <section id="home">
+            <h2>مرحبًا بكم</h2>
+            <p>هذه صفحة ويب كاملة تحتوي على جميع العناصر الأساسية التي قد تحتاجها لبدء موقعك.</p>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/045/132/934/small/a-beautiful-picture-of-the-eiffel-tower-in-paris-the-capital-of-france-with-a-wonderful-background-in-wonderful-natural-colors-photo.jpg" alt="صورة توضيحية" style="width:100%; max-width:800px; height:auto; display:block; margin:1rem auto;">
+        </section>
+        
+        <section id="about">
+            <h2>من نحن</h2>
+            <p>نحن شركة رائدة في مجال تطوير الويب وتقديم الحلول التقنية المتكاملة.</p>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>رؤيتنا</h3>
+                    <p>أن نكون الخيار الأول للعملاء في مجال التكنولوجيا.</p>
+                </div>
+                <div class="card">
+                    <h3>رسالتنا</h3>
+                    <p>تقديم حلول مبتكرة وجودة عالية تلبي احتياجات العملاء.</p>
+                </div>
+                <div class="card">
+                    <h3>قيمنا</h3>
+                    <p>الإبداع، الجودة، الشفافية، العمل الجماعي.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services">
+            <h2>خدماتنا</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>الخدمة</th>
+                        <th>الوصف</th>
+                        <th>السعر</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>تصميم مواقع</td>
+                        <td>تصميم مواقع ويب متجاوبة وجذابة</td>
+                        <td>1000$</td>
+                    </tr>
+                    <tr>
+                        <td>تطوير تطبيقات</td>
+                        <td>تطوير تطبيقات الهاتف والويب</td>
+                        <td>2000$</td>
+                    </tr>
+                    <tr>
+                        <td>استضافة مواقع</td>
+                        <td>حلول استضافة آمنة وسريعة</td>
+                        <td>300$ سنويًا</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="contact">
+            <h2>اتصل بنا</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">الاسم الكامل:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">الخدمة المطلوبة:</label>
+                    <select id="service" name="service">
+                        <option value="design">تصميم مواقع</option>
+                        <option value="development">تطوير تطبيقات</option>
+                        <option value="hosting">استضافة مواقع</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">الرسالة:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
+    </main>
+    
+    <!-- تذييل الصفحة -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2023 موقعي الإلكتروني</p>
+        <p>تابعنا على: 
+            <a href="#" style="color:white;">فيسبوك</a> | 
+            <a href="#" style="color:white;">تويتر</a> | 
+            <a href="#" style="color:white;">إنستغرام</a>
+        </p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // كود JavaScript بسيط
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('تم تحميل الصفحة بنجاح!');
+            
+            // تغيير لون الزر عند التحويم
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    button.style.transform = 'scale(1.05)';
+                });
+                
+                button.addEventListener('mouseleave', () => {
+                    button.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
