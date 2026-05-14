@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammad Allala | Cyber Security Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #22c55e;
+      border-radius: 10px;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.96)),
+        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1974&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: 70px;
+      font-weight: 800;
+      margin-bottom: 15px;
+      color: #22c55e;
+      text-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+
+    .hero p {
+      line-height: 2;
+      color: #e2e8f0;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+      border: 2px solid #22c55e;
+    }
+
+    .btn-primary {
+      background: #22c55e;
+      color: #0f172a;
+    }
+
+    .btn-primary:hover {
+      background: transparent;
+      color: #22c55e;
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      color: #22c55e;
+    }
+
+    .btn-outline:hover {
+      background: #22c55e;
+      color: #0f172a;
+      transform: translateY(-3px);
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #22c55e;
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f8fafc;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      color: #22c55e;
+    }
+
+    section {
+      padding: 100px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      color: #22c55e;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #94a3b8;
+      font-size: 17px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-card {
+      background: #1e293b;
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.3s;
+    }
+
+    .about-card:hover {
+      transform: translateY(-8px);
+      border-color: #22c55e;
+    }
+
+    .about-card h3 {
+      color: #22c55e;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    .about-card p {
+      line-height: 2;
+      color: #cbd5e1;
+    }
+
+    .skills-grid,
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .skill-box,
+    .project-card {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.3s;
+    }
+
+    .skill-box:hover,
+    .project-card:hover {
+      transform: translateY(-7px);
+      border-color: #22c55e;
+      box-shadow: 0 0 25px rgba(34, 197, 94, 0.15);
+    }
+
+    .skill-box h3,
+    .project-card h3 {
+      margin-bottom: 15px;
+      color: #22c55e;
+    }
+
+    .skill-box p,
+    .project-card p {
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+
+    .timeline {
+      border-right: 3px solid #22c55e;
+      padding-right: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .timeline-item {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      background: #22c55e;
+      border-radius: 50%;
+      position: absolute;
+      right: -40px;
+      top: 30px;
+    }
+
+    .timeline-item h3 {
+      color: #22c55e;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item span {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #1e293b;
+      border-radius: 20px;
+      padding: 50px 25px;
+    }
+
+    .contact h3 {
+      font-size: 32px;
+      color: #22c55e;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .socials a {
+      text-decoration: none;
+      color: white;
+      border: 1px solid #22c55e;
+      padding: 12px 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      background: #22c55e;
+      color: #0f172a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 70px;
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .hero h2 {
+        font-size: 22px;
+      }
+
+      nav .container {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <div class="logo">Mohammad</div>
+
+      <ul>
+        <li><a href="#about">من أنا</a></li>
+        <li><a href="#skills">المهارات</a></li>
+        <li><a href="#projects">المشاريع</a></li>
+        <li><a href="#experience">الخبرات</a></li>
+        <li><a href="#contact">التواصل</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <div class="hero">
+      <h1>Mohammad Allala</h1>
+      <h2>Cyber Security Specialist & Web Developer</h2>
+
+      <p>
+        خريج أمن سيبراني مهتم بمجالات اختبار الاختراق، تحليل الهجمات، أنظمة الـ SIEM،
+        وتطوير الحلول الأمنية الحديثة. أعمل على بناء مشاريع احترافية تجمع بين الأمن السيبراني
+        وتطوير البرمجيات مع التركيز على حماية الأنظمة واكتشاف التهديدات.
+      </p>
+
+      <div class="btns">
+        <a href="#projects" class="btn btn-primary">عرض المشاريع</a>
+        <a href="#contact" class="btn btn-outline">تواصل معي</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>من أنا</h2>
+        <p>نبذة مختصرة عني وخبراتي التقنية</p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-card">
+          <h3>نبذة شخصية</h3>
+          <p>
+            أنا مطور ومختص أمن سيبراني أمتلك شغفًا كبيرًا في اكتشاف الثغرات، تحليل التهديدات،
+            وبناء الأنظمة الآمنة. أعمل على مشاريع متقدمة تشمل Splunk، Sysmon، Kali Linux،
+            والتحليل الجنائي الرقمي.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3>الاهتمامات</h3>
+          <p>
+            أمن التطبيقات، تحليل البرمجيات الخبيثة، SIEM، Digital Forensics،
+            تطوير الويب، بناء أنظمة كشف التهديدات، وهندسة البرمجيات الأمنية.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-title">
+        <h2>المهارات</h2>
+        <p>أبرز التقنيات والأدوات التي أعمل عليها</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Cyber Security</h3>
+          <p>
+            Penetration Testing, Incident Response, Threat Hunting,
+            SIEM Analysis, SOC Operations.
+          </p>
+        </div>
+
+        <div class="skill-box">
+          <h3>Tools & Platforms</h3>
+          <p>
+            Kali Linux, Splunk, Burp Suite, Wireshark,
+            Sysmon, Volatility, Any.run.
+          </p>
+        </div>
+
+        <div class="skill-box">
+          <h3>Programming</h3>
+          <p>
+            C#, C++, HTML, CSS, JavaScript, SQL,
+            Windows Forms, .NET.
+          </p>
+        </div>
+
+        <div class="skill-box">
+          <h3>Web Development</h3>
+          <p>
+            تصميم وتطوير مواقع احترافية، إنشاء واجهات حديثة،
+            وتحسين تجربة المستخدم.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-title">
+        <h2>المشاريع</h2>
+        <p>بعض المشاريع التي عملت عليها</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Threat Detection System</h3>
+          <p>
+            نظام متقدم لاكتشاف التهديدات السيبرانية باستخدام الذكاء الاصطناعي وتحليل السجلات الأمنية.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>MarketBook Security Lab</h3>
+          <p>
+            مختبر أمني متكامل لمحاكاة الهجمات السيبرانية واكتشافها باستخدام Splunk وApache Logs.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Mini EDR Solution</h3>
+          <p>
+            تطوير نظام EDR مصغر لمراقبة العمليات والأنشطة المشبوهة على أجهزة ويندوز.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Personal Portfolio</h3>
+          <p>
+            تصميم صفحة شخصية احترافية تعرض المهارات، المشاريع، والخبرات التقنية.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-title">
+        <h2>الخبرات</h2>
+        <p>رحلتي التعليمية والتقنية</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Cyber Security Graduate</h3>
+          <span>Al al-Bayt University</span>
+          <p>
+            دراسة تخصص الأمن السيبراني مع التركيز على تحليل الهجمات، الشبكات، وأنظمة الحماية.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Security Projects</h3>
+          <span>Hands-on Experience</span>
+          <p>
+            تنفيذ مختبرات أمنية عملية تشمل SQL Injection، XSS، Command Injection، وIncident Response.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Software Development</h3>
+          <span>.NET & C#</span>
+          <p>
+            تطوير تطبيقات سطح مكتب باستخدام Windows Forms وقواعد البيانات وواجهات حديثة.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact">
+        <h3>تواصل معي</h3>
+
+        <p>
+          إذا كنت ترغب بالتعاون أو لديك مشروع أو فرصة عمل، يمكنك التواصل معي عبر البريد الإلكتروني أو حساباتي.
+        </p>
+
+        <div class="socials">
+          <a href="mailto:2300906159@st.aabu.edu.jo">Email</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      © 2026 Mohammad Allala - All Rights Reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
